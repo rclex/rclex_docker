@@ -17,3 +17,7 @@ RUN apt-get install -y elixir=1.9.1-1
 
 # cleanup
 RUN apt-get -qy autoremove
+
+# install hex and rebar
+RUN mix local.hex --force
+RUN mix local.rebar --force
