@@ -20,10 +20,9 @@ Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we de
   - `A.B.C`: The version of Elixir (e.g., Elixir 1.9.1)
   - `X.Y.Z`: The version of Erlang (e.g., OTP-22.0.7)
 
-The Tag name associates with the of Git/GitHub Branch name. Here is the list of Tags and links to their respective Branches. **Bold** means the `latest` tag and `main` branch.
+The Tags of Docker image associate with the [Branches of Git/GitHub](https://github.com/rclex/rclex_docker/branches). Here is the list of Tags and links to their respective Branches. **[latest]** means the `latest` tag and `main` branch.
 
-- [dashing-ex1.11.4-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp23.3.1)
+- [dashing-ex1.11.4-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.4-otp23.3.1)
 - [dashing-ex1.10.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.10.4-otp22.3.4)
 - [dashing-ex1.9.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.3.4)
-- **[dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7)**
-
+- [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7) **[latest]**
