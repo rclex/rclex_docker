@@ -27,3 +27,5 @@ The Tags of Docker image associate with the [Branches of Git/GitHub](https://git
 - [dashing-ex1.10.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.10.4-otp22.3.4)
 - [dashing-ex1.9.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.3.4)
 - [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7) **[latest]**
+
+_Note:_ README including the above list is surely maintained only on the [main branch](https://github.com/rclex/rclex_docker#the-rule-of-docker-tags-and-git-branches).
