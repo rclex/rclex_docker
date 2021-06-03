@@ -23,10 +23,10 @@ Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we de
 The Tags of Docker image associate with the [Branches of Git/GitHub](https://github.com/rclex/rclex_docker/branches). Here is the list of Tags and links to their respective Branches. **[latest]** means the `latest` tag and `main` branch.
 
 - [dashing-ex1.12.0-otp24.0.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.12.0-otp24.0.1)
-- [dashing-ex1.11.2-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.2-otp23.3.1)
+- [dashing-ex1.11.2-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.2-otp23.3.1) **[latest]**
   - Note: [dashing-ex1.11.4-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.4-otp23.3.1) does not seem to buid the correct version of OTP. So we do not recommend to use it although it was published.  Also check [rclex/rclex#27](https://github.com/rclex/rclex/issues/27).
 - [dashing-ex1.10.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.10.4-otp22.3.4)
 - [dashing-ex1.9.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.3.4)
-- [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7) **[latest]**
+- [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7)
 
 _Note:_ README including the above list is surely maintained only on the [main branch](https://github.com/rclex/rclex_docker#the-rule-of-docker-tags-and-git-branches).
