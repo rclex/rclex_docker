@@ -21,3 +21,8 @@ RUN apt-get -qy autoremove
 # install hex and rebar
 RUN mix local.hex --force
 RUN mix local.rebar --force
+
+# check version
+RUN env | grep ROS
+RUN mix hex.info
+
