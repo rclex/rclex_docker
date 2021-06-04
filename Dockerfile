@@ -1,5 +1,5 @@
 # base image
-FROM ros:dashing
+FROM ros:foxy
 
 # update sources list
 RUN apt-get clean
