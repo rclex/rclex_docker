@@ -1,6 +1,9 @@
 # base image
 FROM ros:foxy
 
+# force error aboout debconf
+ENV DEBIAN_FRONTEND noninteractive
+
 # update sources list
 RUN apt-get clean
 RUN apt-get update
