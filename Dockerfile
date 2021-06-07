@@ -1,5 +1,8 @@
 # base image
-FROM ros:dashing
+FROM ros:foxy
+
+# force error aboout debconf
+ENV DEBIAN_FRONTEND noninteractive
 
 # update sources list
 RUN apt-get clean

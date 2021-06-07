@@ -31,6 +31,7 @@ _[experimental]_ means that its image has been published but not supported yet f
 - [dashing-ex1.9.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.3.4)
 - [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7)
 
-- [foxy-ex1.11.2-otp23.3.1](https://github.com/rclex/rclex_docker/tree/foxy-ex1.11.2-otp23.3.1) _[experimental]_
+- [foxy-ex1.11.2-otp23.3.1](https://github.com/rclex/rclex_docker/tree/foxy-ex1.11.2-otp23.3.1)
+- [foxy-ex1.12.0-otp24.0.1](https://github.com/rclex/rclex_docker/tree/foxy-ex1.12.0-otp24.0.1)
 
 _Note:_ README including the above list is surely maintained only on the [main branch](https://github.com/rclex/rclex_docker#the-rule-of-docker-tags-and-git-branches).
