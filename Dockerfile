@@ -8,6 +8,9 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get clean
 RUN apt-get update
 
+# install AStyle to format C code (NIFs)
+RUN apt-get install -y astyle
+
 # install Elixir
 RUN apt-get install -y wget
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && \
