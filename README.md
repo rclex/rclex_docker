@@ -33,7 +33,7 @@ _[experimental]_ means that its image has been published but not supported yet f
 
 - [dashing-ex1.12.0-otp24.0.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.12.0-otp24.0.1)
 - [dashing-ex1.11.2-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.2-otp23.3.1)
-  - Note: [dashing-ex1.11.4-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.4-otp23.3.1) does not seem to buid the correct version of OTP. So we do not recommend to use it although it was published.  Also check [rclex/rclex#27](https://github.com/rclex/rclex/issues/27).
+  - Note: [dashing-ex1.11.4-otp23.3.1](https://github.com/rclex/rclex_docker/tree/dashing-ex1.11.4-otp23.3.1) does not seem to build the correct version of OTP. So we do not recommend to use it although it was published.  Also check [rclex/rclex#27](https://github.com/rclex/rclex/issues/27).
 - [dashing-ex1.10.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.10.4-otp22.3.4)
 - [dashing-ex1.9.4-otp22.3.4](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.3.4)
 - [dashing-ex1.9.1-otp22.0.7](https://github.com/rclex/rclex_docker/tree/dashing-ex1.9.1-otp22.0.7)
