@@ -1,10 +1,10 @@
 ### FIXME according to branch/tag
 # base image
-FROM hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325
+FROM hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-bionic-20210325
 # Set Ubuntu Codename
-ENV UBUNTU_CODENAME focal
+ENV UBUNTU_CODENAME bionic
 # Set ROS_DISTRO environment
-ENV ROS_DISTRO foxy
+ENV ROS_DISTRO dashing
 
 # force error about debconf
 ENV DEBIAN_FRONTEND noninteractive
