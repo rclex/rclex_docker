@@ -22,9 +22,9 @@ Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we de
 
 ## Available versions (docker tags)
 
-Here is the list of Tags. They are associated with the ext of each Dockerfile on [GitHub repository](https://github.com/rclex/rclex_docker).
+Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.com/r/rclex/rclex_docker/tags)). They are associated with the ext of each Dockerfile on [GitHub repository](https://github.com/rclex/rclex_docker).
 
-**[latest]** means the `latest` tag and `main` branch.
+**[latest]** means the `latest` tag and `Dockerfile` (without the ext).
 
 ### Foxy Fitzroy
 
