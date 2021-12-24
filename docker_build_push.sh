@@ -13,7 +13,7 @@ do
   if [ $result -eq 0 ];
   then
     echo "INFO: building ${tag} as target tags os Docker image"
-    docker build . -f Dockerfile.${tag} -t rclex/rclex_docker:${tag}
+    docker build . -f Dockerfile.${tag} -t rclex/rclex_docker:${tag} --no-cache
     echo ${tag}
     docker run --rm rclex/rclex_docker:${tag} bash -c 'echo ${ROS_DISTRO}'
     docker run --rm rclex/rclex_docker:${tag} bash -c 'mix hex.info'
