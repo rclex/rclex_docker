@@ -1,4 +1,4 @@
-### FIXME according to branch/tag
+### FIXME according to the target version
 # base image
 FROM hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325
 # Set Ubuntu Codename
