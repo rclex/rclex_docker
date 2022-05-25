@@ -4,6 +4,8 @@ TAGS=()
 TAGS+=(foxy-ex1.13.1-otp24.1.7 foxy-ex1.12.3-otp24.1.5 foxy-ex1.11.4-otp23.3.4)
 TAGS+=(dashing-ex1.12.3-otp24.1.5 dashing-ex1.11.4-otp23.3.4 dashing-ex1.10.4-otp23.3.4 dashing-ex1.9.4-otp22.3.4.18)
 TAGS+=(galactic-ex1.13.1-otp24.1.7 galactic-ex1.12.3-otp24.1.5 galactic-ex1.11.4-otp23.3.4)
+TAGS+=(galactic-ex1.13.1-otp24.1.7 galactic-ex1.12.3-otp24.1.5 galactic-ex1.11.4-otp23.3.4)
+TAGS+=(jammy-ex1.12.2-otp24.2.1)
 
 for tag in ${TAGS[@]};
 do
