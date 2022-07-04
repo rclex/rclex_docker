@@ -8,7 +8,8 @@ if config_env() == :dev do
       pre_commit: [
         tasks: [
           {:cmd, "mix test"},
-          {:cmd, "mix format --check-formatted"}
+          {:cmd, "mix format --check-formatted"},
+          {:cmd, "mix credo"}
         ]
       ]
     ]
