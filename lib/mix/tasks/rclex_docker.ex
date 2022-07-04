@@ -1,6 +1,6 @@
-defmodule RclexDocker do
+defmodule Mix.Tasks.RclexDocker do
   @moduledoc """
-  Documentation for `RclexDocker`.
+  Documentation for `Mix.Tasks.RclexDocker`.
   """
 
   @doc """
