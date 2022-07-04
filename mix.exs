@@ -22,7 +22,8 @@ defmodule RclexDocker.MixProject do
   defp deps do
     [
       {:git_hooks, "~> 0.7.0", only: [:dev], runtime: false},
-      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
+      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 end
