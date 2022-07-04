@@ -1,0 +1,5 @@
+%{
+  "blankable": {:hex, :blankable, "1.0.0", "89ab564a63c55af117e115144e3b3b57eb53ad43ba0f15553357eb283e0ed425", [:mix], [], "hexpm", "7cf11aac0e44f4eedbee0c15c1d37d94c090cb72a8d9fddf9f7aec30f9278899"},
+  "git_hooks": {:hex, :git_hooks, "0.7.3", "09489e94d88dfc767662e22aff2b6208bd7cf555a19dd0e1477cca4683ce0701", [:mix], [{:blankable, "~> 1.0.0", [hex: :blankable, repo: "hexpm", optional: false]}, {:recase, "~> 0.7.0", [hex: :recase, repo: "hexpm", optional: false]}], "hexpm", "d6ddedeb4d3a8602bc3f84e087a38f6150a86d9e790628ed8bc70e6d90681659"},
+  "recase": {:hex, :recase, "0.7.0", "3f2f719f0886c7a3b7fe469058ec539cb7bbe0023604ae3bce920e186305e5ae", [:mix], [], "hexpm", "36f5756a9f552f4a94b54a695870e32f4e72d5fad9c25e61bc4a3151c08a4e0c"},
+}
