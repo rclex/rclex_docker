@@ -49,6 +49,9 @@ RUN echo 'source /opt/ros/${ROS_DISTRO}/setup.sh' >> ~/.bashrc
 
 ### install ROS END
 
+# for mix test.watch
+RUN apt-get install -y inotify-tools
+
 # cleanup
 RUN apt-get -qy autoremove
 
