@@ -60,3 +60,7 @@ RUN mix local.rebar --force
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && env | grep ROS
 RUN mix hex.info
 
+COPY docker-entrypoint.sh /root/
+RUN chmod +x /root/docker-entrypoint.sh
+ENTRYPOINT ["/root/docker-entrypoint.sh"]
+CMD ["/bin/bash"]
