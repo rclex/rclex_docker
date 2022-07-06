@@ -7,6 +7,7 @@ defmodule Mix.Tasks.RclexDocker.Build do
   ## Options
 
   * --dry-run - show all raw docker commands which invoked by this task.
+  * --latest - build only latest target.
   """
 
   use Mix.Task
@@ -17,8 +18,8 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
   defmodule Options do
     @moduledoc false
-    @type t :: %__MODULE__{dry_run: boolean()}
-    defstruct dry_run: false
+    @type t :: %__MODULE__{dry_run: boolean(), latest: boolean()}
+    defstruct dry_run: false, latest: false
   end
 
   def run(args) when is_list(args) do
@@ -28,6 +29,27 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
     opts = parse_args(args)
 
+    if opts.latest do
+      build_latest(opts)
+    else
+      build_all(opts)
+    end
+  end
+
+  def build_latest(opts) do
+    target = RclexDocker.latest_target()
+    parsed_map = RclexDocker.parse_base_image_name(target.base_image)
+
+    build_command(
+      target.base_image,
+      parsed_map["ubuntu_codename"],
+      target.ros_distribution,
+      "latest"
+    )
+    |> docker_build(opts)
+  end
+
+  def build_all(opts) do
     for %Target{} = target <- RclexDocker.list_target() do
       parsed_map = RclexDocker.parse_base_image_name(target.base_image)
       tag = RclexDocker.create_tag(parsed_map, target.ros_distribution)
@@ -90,6 +112,7 @@ defmodule Mix.Tasks.RclexDocker.Build do
     Enum.reduce(args, %Options{}, fn arg, acc ->
       case arg do
         "--dry-run" -> %Options{acc | dry_run: true}
+        "--latest" -> %Options{acc | latest: true}
         _ -> acc
       end
     end)

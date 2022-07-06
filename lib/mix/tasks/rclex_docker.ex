@@ -18,6 +18,10 @@ defmodule Mix.Tasks.RclexDocker do
     end
   end
 
+  def latest_target_tuple() do
+    {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "foxy"}
+  end
+
   def list_target_tuples() do
     [
       {"hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325", "dashing"},
@@ -32,6 +36,16 @@ defmodule Mix.Tasks.RclexDocker do
       {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "galactic"},
       {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
     ]
+  end
+
+  @spec latest_target() :: Target.t()
+  def latest_target() do
+    {base_image, ros_distribution} = latest_target_tuple()
+
+    %Target{
+      base_image: base_image,
+      ros_distribution: ros_distribution
+    }
   end
 
   @spec list_target() :: [Target.t()]
