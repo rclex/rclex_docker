@@ -1,10 +1,13 @@
 ### FIXME according to the target version
-# base image
-FROM hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325
-# Set Ubuntu Codename
-ENV UBUNTU_CODENAME focal
-# Set ROS_DISTRO environment
-ENV ROS_DISTRO foxy
+# base image, ARG is overridable by --build-arg
+ARG BASE_IMAGE=hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325
+FROM $BASE_IMAGE
+# Set Ubuntu Codename ENV, ARG is overridable by --build-arg
+ARG UBUNTU_CODENAME
+ENV UBUNTU_CODENAME=${UBUNTU_CODENAME:-focal}
+# Set ROS_DISTRO ENV, ARG is overridable by --build-arg
+ARG ROS_DISTRO
+ENV ROS_DISTRO=${ROS_DISTRO:-foxy}
 
 # force error about debconf
 ENV DEBIAN_FRONTEND noninteractive
@@ -46,6 +49,9 @@ RUN echo 'source /opt/ros/${ROS_DISTRO}/setup.sh' >> ~/.bashrc
 
 ### install ROS END
 
+# for mix test.watch
+RUN apt-get install -y inotify-tools
+
 # cleanup
 RUN apt-get -qy autoremove
 
@@ -57,3 +63,7 @@ RUN mix local.rebar --force
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && env | grep ROS
 RUN mix hex.info
 
+COPY docker-entrypoint.sh /root/
+RUN chmod +x /root/docker-entrypoint.sh
+ENTRYPOINT ["/root/docker-entrypoint.sh"]
+CMD ["/bin/bash"]
