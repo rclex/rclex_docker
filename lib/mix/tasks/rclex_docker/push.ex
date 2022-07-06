@@ -38,7 +38,7 @@ defmodule Mix.Tasks.RclexDocker.Push do
 
   def push_latest(opts) do
     build_command("latest")
-    |> docker_build(opts)
+    |> docker_push(opts)
   end
 
   def push_all(opts) do
@@ -46,7 +46,7 @@ defmodule Mix.Tasks.RclexDocker.Push do
       RclexDocker.parse_base_image_name(target.base_image)
       |> RclexDocker.create_tag(target.ros_distribution)
       |> build_command()
-      |> docker_build(opts)
+      |> docker_push(opts)
     end
   end
 
@@ -54,18 +54,18 @@ defmodule Mix.Tasks.RclexDocker.Push do
     "docker push rclex/rclex_docker:#{tag} "
   end
 
-  @spec docker_build(command :: String.t(), opts :: Options.t()) :: :ok
-  def docker_build(command, opts \\ %Options{}) do
+  @spec docker_push(command :: String.t(), opts :: Options.t()) :: :ok
+  def docker_push(command, opts \\ %Options{}) do
     if opts.dry_run do
       IO.puts(command)
     else
       IO.puts(command)
-      docker_build_impl(command)
+      docker_push_impl(command)
     end
   end
 
-  @spec docker_build_impl(command :: String.t()) :: :ok
-  def docker_build_impl(command) when is_binary(command) do
+  @spec docker_push_impl(command :: String.t()) :: :ok
+  def docker_push_impl(command) when is_binary(command) do
     [docker | args] = ~w"#{command}"
 
     case System.cmd(docker, args, into: IO.stream(:stdio, :line)) do
