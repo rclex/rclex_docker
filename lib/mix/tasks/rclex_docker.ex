@@ -19,22 +19,30 @@ defmodule Mix.Tasks.RclexDocker do
   end
 
   def latest_target_tuple() do
-    {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "foxy"}
+    {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"}
   end
 
   def list_target_tuples() do
     [
-      {"hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325", "dashing"},
-      {"hexpm/elixir:1.10.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
-      {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
-      {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-bionic-20210325", "dashing"},
-      {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "foxy"},
+      ### Dashing
+      # {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-bionic-20210325", "dashing"},
+      # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
+      # {"hexpm/elixir:1.10.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
+      # {"hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325", "dashing"},
+      ### Foxy
+      {"hexpm/elixir:1.14.0-erlang-25.0.4-ubuntu-focal-20211006", "foxy"},
+      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"},
+      # {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "foxy"},
       {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "foxy"},
-      {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "foxy"},
-      {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "galactic"},
-      {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "galactic"},
-      {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "galactic"},
-      {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
+      {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "foxy"},
+      ### Galactic
+      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "galactic"},
+      # {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "galactic"},
+      # {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "galactic"},
+      # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "galactic"},
+      ### Humble
+      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"}
+      # {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
     ]
   end
 
@@ -90,7 +98,7 @@ defmodule Mix.Tasks.RclexDocker do
       iex> RclexDocker.parse_base_image_name("hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325") |>
       iex> RclexDocker.create_tag("foxy")
       "foxy-ex1.12.3-otp24.1.5"
-      
+
   """
   def create_tag(%{} = parsed_map, ros_distribution) do
     %{

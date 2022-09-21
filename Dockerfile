@@ -1,6 +1,6 @@
 ### FIXME according to the target version
 # base image, ARG is overridable by --build-arg
-ARG BASE_IMAGE=hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325
+ARG BASE_IMAGE=hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006
 FROM $BASE_IMAGE
 # Set Ubuntu Codename ENV, ARG is overridable by --build-arg
 ARG UBUNTU_CODENAME
