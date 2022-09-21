@@ -49,3 +49,17 @@ Note: Galactic is not suppored yet for Rclex but these images are already publis
 - galactic-ex1.12.3-otp24.1.5
 - galactic-ex1.11.4-otp23.3.4
 
+## Note for developers: how to use this repository
+
+### Available commands
+
+* `mix rclex_docker.build [options]`: Builds rclex docker images
+  * `--dry-run` - show all raw docker commands which invoked by this task.
+  * `--latest` - build only latest target.
+* `mix rclex_docker.push [options]`: Pushes rclex docker images
+  * `--dry-run` - show all raw docker commands which invoked by this task.
+  * `--latest` - push only latest target.
+
+### Modification of versions
+
+Edit `list_target_tuples()` in lib/rclex_docker.ex
