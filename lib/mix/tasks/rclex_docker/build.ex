@@ -54,10 +54,6 @@ defmodule Mix.Tasks.RclexDocker.Build do
     target = RclexDocker.latest_target()
     parsed_map = RclexDocker.parse_base_image_name(target.base_image)
 
-    System.cmd("docker", ["buildx", "create", "--use", "--name", "rclex_builder"],
-      into: IO.stream(:stdio, :line)
-    )
-
     buildx_command(
       target.base_image,
       parsed_map["ubuntu_codename"],
@@ -65,8 +61,6 @@ defmodule Mix.Tasks.RclexDocker.Build do
       "latest"
     )
     |> docker_build(opts)
-
-    System.cmd("docker", ["buildx", "rm", "rclex_builder"], into: IO.stream(:stdio, :line))
   end
 
   def build_all(opts) do

@@ -74,6 +74,9 @@ In particular, please note that we have decided to stop supporting Dashing since
   * `--latest` - push only latest target.
   * `--multi` - push latest target for multi-platform.
 
+When using `--multi` option, you need to create a builder first (e.g., `docker buildx create --use --name rclex_builder`).
+And also, we guess that QEMU may be at least v5 (see [detail](https://askubuntu.com/a/1369504)).
+
 ### Modification of versions
 
 Edit `list_target_tuples()` in lib/rclex_docker.ex
