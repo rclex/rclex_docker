@@ -8,6 +8,7 @@ defmodule Mix.Tasks.RclexDocker.Push do
 
   * --dry-run - show all raw docker commands which invoked by this task.
   * --latest - push only latest target.
+  * --multi - push latest target for multi-platform.
   """
 
   use Mix.Task
@@ -18,8 +19,8 @@ defmodule Mix.Tasks.RclexDocker.Push do
 
   defmodule Options do
     @moduledoc false
-    @type t :: %__MODULE__{dry_run: boolean(), latest: boolean()}
-    defstruct dry_run: false, latest: false
+    @type t :: %__MODULE__{dry_run: boolean(), latest: boolean(), multi: boolean()}
+    defstruct dry_run: false, latest: false, multi: false
   end
 
   def run(args) when is_list(args) do
@@ -29,15 +30,28 @@ defmodule Mix.Tasks.RclexDocker.Push do
 
     opts = parse_args(args)
 
-    if opts.latest do
-      push_latest(opts)
-    else
-      push_all(opts)
+    cond do
+      opts.latest == true -> push_latest(opts)
+      opts.multi == true -> push_multi(opts)
+      true -> push_all(opts)
     end
   end
 
   def push_latest(opts) do
     build_command("latest")
+    |> docker_push(opts)
+  end
+
+  def push_multi(opts) do
+    target = RclexDocker.latest_target()
+    parsed_map = RclexDocker.parse_base_image_name(target.base_image)
+
+    buildx_command(
+      target.base_image,
+      parsed_map["ubuntu_codename"],
+      target.ros_distribution,
+      "latest"
+    )
     |> docker_push(opts)
   end
 
@@ -52,6 +66,18 @@ defmodule Mix.Tasks.RclexDocker.Push do
 
   def build_command(tag) do
     "docker push rclex/rclex_docker:#{tag} "
+  end
+
+  def buildx_command(base_iamge, ubuntu_codename, ros_distro, tag) do
+    "docker buildx build " <>
+      "--platform linux/amd64,linux/arm64 " <>
+      "-f Dockerfile " <>
+      "-t rclex/rclex_docker:#{tag} " <>
+      "--build-arg BASE_IMAGE=#{base_iamge} " <>
+      "--build-arg UBUNTU_CODENAME=#{ubuntu_codename} " <>
+      "--build-arg ROS_DISTRO=#{ros_distro} " <>
+      ". " <>
+      "--push"
   end
 
   @spec docker_push(command :: String.t(), opts :: Options.t()) :: :ok
@@ -92,6 +118,7 @@ defmodule Mix.Tasks.RclexDocker.Push do
       case arg do
         "--dry-run" -> %Options{acc | dry_run: true}
         "--latest" -> %Options{acc | latest: true}
+        "--multi" -> %Options{acc | multi: true}
         _ -> acc
       end
     end)

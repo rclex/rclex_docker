@@ -8,6 +8,7 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
   * --dry-run - show all raw docker commands which invoked by this task.
   * --latest - build only latest target.
+  * --multi - build latest target for multi-platform.
   """
 
   use Mix.Task
@@ -18,8 +19,8 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
   defmodule Options do
     @moduledoc false
-    @type t :: %__MODULE__{dry_run: boolean(), latest: boolean()}
-    defstruct dry_run: false, latest: false
+    @type t :: %__MODULE__{dry_run: boolean(), latest: boolean(), multi: boolean()}
+    defstruct dry_run: false, latest: false, multi: false
   end
 
   def run(args) when is_list(args) do
@@ -29,10 +30,10 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
     opts = parse_args(args)
 
-    if opts.latest do
-      build_latest(opts)
-    else
-      build_all(opts)
+    cond do
+      opts.latest == true -> build_latest(opts)
+      opts.multi == true -> build_multi(opts)
+      true -> build_all(opts)
     end
   end
 
@@ -41,6 +42,19 @@ defmodule Mix.Tasks.RclexDocker.Build do
     parsed_map = RclexDocker.parse_base_image_name(target.base_image)
 
     build_command(
+      target.base_image,
+      parsed_map["ubuntu_codename"],
+      target.ros_distribution,
+      "latest"
+    )
+    |> docker_build(opts)
+  end
+
+  def build_multi(opts) do
+    target = RclexDocker.latest_target()
+    parsed_map = RclexDocker.parse_base_image_name(target.base_image)
+
+    buildx_command(
       target.base_image,
       parsed_map["ubuntu_codename"],
       target.ros_distribution,
@@ -66,6 +80,18 @@ defmodule Mix.Tasks.RclexDocker.Build do
 
   def build_command(base_iamge, ubuntu_codename, ros_distro, tag) do
     "docker build " <>
+      "-f Dockerfile " <>
+      "-t rclex/rclex_docker:#{tag} " <>
+      "--no-cache " <>
+      "--build-arg BASE_IMAGE=#{base_iamge} " <>
+      "--build-arg UBUNTU_CODENAME=#{ubuntu_codename} " <>
+      "--build-arg ROS_DISTRO=#{ros_distro} " <>
+      "."
+  end
+
+  def buildx_command(base_iamge, ubuntu_codename, ros_distro, tag) do
+    "docker buildx build " <>
+      "--platform linux/amd64,linux/arm64 " <>
       "-f Dockerfile " <>
       "-t rclex/rclex_docker:#{tag} " <>
       "--no-cache " <>
@@ -113,6 +139,7 @@ defmodule Mix.Tasks.RclexDocker.Build do
       case arg do
         "--dry-run" -> %Options{acc | dry_run: true}
         "--latest" -> %Options{acc | latest: true}
+        "--multi" -> %Options{acc | multi: true}
         _ -> acc
       end
     end)
