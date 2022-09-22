@@ -13,55 +13,57 @@ ENV ROS_DISTRO=${ROS_DISTRO:-foxy}
 ENV DEBIAN_FRONTEND noninteractive
 
 # update sources list
-RUN apt-get clean
-RUN apt-get update
-
-# install additonal packages
-RUN apt-get install -y git sudo build-essential
-
-# install AStyle to format C code (NIFs)
-RUN apt-get install -y astyle
+## inotify-tools: for mix test.watch
+## astyle: to format C code in NIFs
+RUN apt-get clean && \
+  apt-get update && \
+  apt-get install -y git sudo build-essential \
+  inotify-tools \
+  astyle \
+  && rm -rf /var/lib/apt/lists/*
 
 ### install ROS START
 ### https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
 # Set locale
-RUN apt update && apt -y install locales
-RUN locale-gen en_US en_US.UTF-8
-RUN update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-RUN export LANG=en_US.UTF-8
+RUN apt-get update && apt-get -y install locales && \
+  locale-gen en_US en_US.UTF-8 && \
+  update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
+  export LANG=en_US.UTF-8 \
+  && rm -rf /var/lib/apt/lists/*
 
 # Setup Sources
-RUN apt update && apt install -y curl gnupg2 lsb-release
+RUN apt-get update && apt-get install -y curl gnupg2 lsb-release \
+  && rm -rf /var/lib/apt/lists/*
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu ${UBUNTU_CODENAME} main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 # Install ROS 2 packages
-RUN apt update
-RUN apt install -y ros-${ROS_DISTRO}-ros-base
+RUN apt-get update && \
+  apt-get install -y ros-${ROS_DISTRO}-ros-base \
+  && rm -rf /var/lib/apt/lists/*
 
-# Install ROS 2 packages
-RUN apt install -y python3-colcon-common-extensions
+# Install colcon-core
+RUN apt-get update && \
+  apt-get install -y python3-colcon-common-extensions \
+  && rm -rf /var/lib/apt/lists/*
 
 # Setup ROS environment in shell
 RUN echo 'source /opt/ros/${ROS_DISTRO}/setup.sh' >> ~/.bashrc
 
 ### install ROS END
 
-# for mix test.watch
-RUN apt-get install -y inotify-tools
-
 # cleanup
 RUN apt-get -qy autoremove
 
 # install hex and rebar
-RUN mix local.hex --force
-RUN mix local.rebar --force
+RUN mix local.hex --force && \
+  mix local.rebar --force
 
 # check version
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh && env | grep ROS
-RUN mix hex.info
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && env | grep ROS && \
+  mix hex.info
 
 COPY docker-entrypoint.sh /root/
 RUN chmod +x /root/docker-entrypoint.sh
