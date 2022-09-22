@@ -24,7 +24,8 @@ Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we de
 
 Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.com/r/rclex/rclex_docker/tags)). They are associated with the ext of each Dockerfile on [GitHub repository](https://github.com/rclex/rclex_docker).
 
-**[latest]** means the `latest` tag and `Dockerfile` (without the ext).
+**[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
+Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
 
 - Foxy Fitzroy
   - foxy-ex1.14.0-otp25.0.4
@@ -67,9 +68,11 @@ In particular, please note that we have decided to stop supporting Dashing since
 * `mix rclex_docker.build [options]`: Builds rclex docker images
   * `--dry-run` - show all raw docker commands which invoked by this task.
   * `--latest` - build only latest target.
+  * `--multi` - build latest target for multi-platform.
 * `mix rclex_docker.push [options]`: Pushes rclex docker images
   * `--dry-run` - show all raw docker commands which invoked by this task.
   * `--latest` - push only latest target.
+  * `--multi` - push latest target for multi-platform.
 
 ### Modification of versions
 
