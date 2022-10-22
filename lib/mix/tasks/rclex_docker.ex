@@ -34,7 +34,7 @@ defmodule Mix.Tasks.RclexDocker do
       {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"},
       # {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "foxy"},
       {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "foxy"},
-      {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "foxy"},
+      # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "foxy"},
       ### Galactic
       {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "galactic"},
       # {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "galactic"},

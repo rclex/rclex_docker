@@ -31,7 +31,6 @@ Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
   - foxy-ex1.14.0-otp25.0.4
   - foxy-ex1.13.4-otp25.0.3 **[latest]**
   - foxy-ex1.12.3-otp24.1.5
-  - foxy-ex1.11.4-otp23.3.4
 
 ### Experimental versions
 
@@ -54,6 +53,7 @@ In particular, please note that we have decided to stop supporting Dashing since
   - dashing-ex1.9.4-otp22.3.4.18
 - Foxy Fitzroy
   - foxy-ex1.13.1-otp24.1.7
+  - foxy-ex1.11.4-otp23.3.4
 - Galactic Geochelone
   - galactic-ex1.13.1-otp24.1.7
   - galactic-ex1.12.3-otp24.1.5
