@@ -113,17 +113,4 @@ defmodule Mix.Tasks.RclexDocker do
   def docker_command_exists?() do
     not is_nil(System.find_executable("docker"))
   end
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> RclexDocker.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
