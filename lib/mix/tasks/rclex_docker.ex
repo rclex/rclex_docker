@@ -110,9 +110,8 @@ defmodule Mix.Tasks.RclexDocker do
     "#{ros_distribution}-ex#{elixir_version}-otp#{erlang_otp_version}"
   end
 
-  # TODO: implement
   def docker_command_exists?() do
-    true
+    not is_nil(System.find_executable("docker"))
   end
 
   @doc """
