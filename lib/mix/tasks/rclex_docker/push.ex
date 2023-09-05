@@ -1,6 +1,7 @@
 defmodule Mix.Tasks.RclexDocker.Push do
+  @shortdoc "Pushes rclex docker images"
   @moduledoc """
-  Pushes rclex docker images
+  #{@shortdoc}
 
       $ mix rclex_docker.push [options]
 

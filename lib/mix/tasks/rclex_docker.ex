@@ -1,6 +1,7 @@
 defmodule Mix.Tasks.RclexDocker do
+  @shortdoc "Shows rclex docker targets which this tasks can build and push"
   @moduledoc """
-  Shows rclex docker targets which this tasks can build and push.
+  #{@shortdoc}
   """
 
   use Mix.Task
