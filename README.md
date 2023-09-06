@@ -38,32 +38,30 @@ Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
   - foxy-ex1.14.5-otp25.3.2.5
   - foxy-ex1.13.4-otp25.0.3
 
-### Experimental versions
-
-The following versions are not supported yet for Rclex but these images are already published to Docker Hub for the future.
+We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
+In particular, we have decided to stop supporting for Dashing due to compatibility with Rclex code.
 
 ### Deprecated versions
 
 The following versions were used in the past and are still available on Docker Hub, but are no longer used for the operation test of Rclex.
-In particular, please note that we have decided to stop supporting Dashing since it has already reached EOL.
 
-- Dashing Diademata
-  - dashing-ex1.12.3-otp24.1.5
-  - dashing-ex1.11.4-otp23.3.4
-  - dashing-ex1.10.4-otp23.3.4
-  - dashing-ex1.9.4-otp22.3.4.18
-- Foxy Fitzroy
-  - foxy-ex1.14.0-otp25.0.4
-  - foxy-ex1.13.1-otp24.1.7
-  - foxy-ex1.12.3-otp24.1.5
-  - foxy-ex1.11.4-otp23.3.4
+- Humble Hawksbill
+  - humble-ex1.13.4-otp24.3.4.2
 - Galactic Geochelone
   - galactic-ex1.13.4-otp25.0.3
   - galactic-ex1.13.1-otp24.1.7
   - galactic-ex1.12.3-otp24.1.5
   - galactic-ex1.11.4-otp23.3.4
-- Humble Hawksbill
-  - humble-ex1.13.4-otp24.3.4.2
+- Foxy Fitzroy
+  - foxy-ex1.14.0-otp25.0.4
+  - foxy-ex1.13.1-otp24.1.7
+  - foxy-ex1.12.3-otp24.1.5
+  - foxy-ex1.11.4-otp23.3.4
+- Dashing Diademata
+  - dashing-ex1.12.3-otp24.1.5
+  - dashing-ex1.11.4-otp23.3.4
+  - dashing-ex1.10.4-otp23.3.4
+  - dashing-ex1.9.4-otp22.3.4.18
 
 ## Note for developers: how to use this repository
 
