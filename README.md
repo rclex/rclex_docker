@@ -16,9 +16,9 @@ $ docker run -it --rm --name rclex rclex/rclex_docker:latest
 Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we decide to give the Tag of Docker image a long name to clarify each version.
 
 - `name`-ex`A.B.C`-otp`X.Y.Z`
-  - `name`: The distribution of ROS 2 (e.g., foxy)
-  - `A.B.C`: The version of Elixir (e.g., Elixir 1.12.3)
-  - `X.Y.Z`: The version of Erlang (e.g., OTP-24.1.5)
+  - `name`: The distribution of ROS 2 (e.g., humble)
+  - `A.B.C`: The version of Elixir (e.g., Elixir 1.15.5)
+  - `X.Y.Z`: The version of Erlang (e.g., OTP-26.0.2)
 
 ## Available versions (docker tags)
 
