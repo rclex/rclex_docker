@@ -27,6 +27,8 @@ Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.
 **[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
 Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
 
+- Iron Irwini
+  - iron-ex1.15.5-otp26.0.2
 - Humble Hawksbill
   - humble-ex1.15.5-otp26.0.2 **[latest]**
   - humble-ex1.14.5-otp25.3.2.5

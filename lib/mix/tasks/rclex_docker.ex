@@ -47,8 +47,10 @@ defmodule Mix.Tasks.RclexDocker do
       ### Humble
       {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "humble"},
       {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-jammy-20230126", "humble"},
-      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"}
+      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"},
       # {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
+      ### Iron
+      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"}
     ]
   end
 
