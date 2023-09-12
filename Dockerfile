@@ -39,6 +39,13 @@ RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o
 
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu ${UBUNTU_CODENAME} main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
+# Upgrade before installing ROS 2 packages
+# WHY: refer to "Warning" in https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#install-ros-2-packages
+RUN apt-get update \
+  && apt-get upgrade \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
 # Install ROS 2 packages
 RUN apt-get update && \
   apt-get install -y ros-${ROS_DISTRO}-ros-base \
