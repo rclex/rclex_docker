@@ -32,9 +32,9 @@ defmodule Mix.Tasks.RclexDocker do
       # {"hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325", "dashing"},
       ### Foxy
       {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-focal-20230126", "foxy"},
-      {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-focal-20230126", "foxy"},
+      # {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-focal-20230126", "foxy"},
       # {"hexpm/elixir:1.14.0-erlang-25.0.4-ubuntu-focal-20211006", "foxy"},
-      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"},
+      # {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"},
       # {"hexpm/elixir:1.13.1-erlang-24.1.7-ubuntu-focal-20210325", "foxy"},
       # {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "foxy"},
       # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "foxy"},
@@ -47,8 +47,10 @@ defmodule Mix.Tasks.RclexDocker do
       ### Humble
       {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "humble"},
       {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-jammy-20230126", "humble"},
-      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"}
+      {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"},
       # {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
+      ### Iron
+      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"}
     ]
   end
 

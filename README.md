@@ -27,19 +27,24 @@ Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.
 **[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
 Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
 
-- Humble Hawksbill
+- Humble Hawksbill (**LTS rosdistro until May 2027**)
   - humble-ex1.15.5-otp26.0.2 **[latest]**
   - humble-ex1.14.5-otp25.3.2.5
   - humble-ex1.13.4-otp25.0.3
-- Galactic Geochelone
+- Galactic Geochelone (_EOL!_)
   - galactic-ex1.15.5-otp26.0.2
-- Foxy Fitzroy
+- Foxy Fitzroy (_EOL!_)
   - foxy-ex1.15.5-otp26.0.2
-  - foxy-ex1.14.5-otp25.3.2.5
-  - foxy-ex1.13.4-otp25.0.3
 
 We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
 In particular, we have decided to stop supporting for Dashing due to compatibility with Rclex code.
+
+### Experimental versions
+
+The following versions are not supported yet and used as CI targets for Rclex, but these images are already published to Docker Hub for the future.
+
+- Iron Irwini (_STS until Nov 2024_)
+  - iron-ex1.15.5-otp26.0.2
 
 ### Deprecated versions
 
@@ -53,7 +58,9 @@ The following versions were used in the past and are still available on Docker H
   - galactic-ex1.12.3-otp24.1.5
   - galactic-ex1.11.4-otp23.3.4
 - Foxy Fitzroy
+  - foxy-ex1.14.5-otp25.3.2.5
   - foxy-ex1.14.0-otp25.0.4
+  - foxy-ex1.13.4-otp25.0.3
   - foxy-ex1.13.1-otp24.1.7
   - foxy-ex1.12.3-otp24.1.5
   - foxy-ex1.11.4-otp23.3.4
