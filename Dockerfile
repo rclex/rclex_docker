@@ -1,13 +1,13 @@
 ### FIXME according to the target version
 # base image, ARG is overridable by --build-arg
-ARG BASE_IMAGE=hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006
+ARG BASE_IMAGE=hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126
 FROM $BASE_IMAGE
 # Set Ubuntu Codename ENV, ARG is overridable by --build-arg
 ARG UBUNTU_CODENAME
-ENV UBUNTU_CODENAME=${UBUNTU_CODENAME:-focal}
+ENV UBUNTU_CODENAME=${UBUNTU_CODENAME:-jammy}
 # Set ROS_DISTRO ENV, ARG is overridable by --build-arg
 ARG ROS_DISTRO
-ENV ROS_DISTRO=${ROS_DISTRO:-foxy}
+ENV ROS_DISTRO=${ROS_DISTRO:-humble}
 
 # force error about debconf
 ENV DEBIAN_FRONTEND noninteractive
@@ -23,7 +23,7 @@ RUN apt-get clean && \
   && rm -rf /var/lib/apt/lists/*
 
 ### install ROS START
-### https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+### https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
 # Set locale
 RUN apt-get update && apt-get -y install locales && \
