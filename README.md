@@ -29,11 +29,9 @@ They are associated with the ext of each Dockerfile on [GitHub repository](https
 Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
-  - humble-ex1.15.5-otp26.0.2 **[latest]**
+  - humble-ex1.16.2-otp26.2.3
+  - humble-ex1.15.7-otp26.2.3 **[latest]**
   - humble-ex1.14.5-otp25.3.2.5
-  - humble-ex1.13.4-otp25.0.3
-- Galactic Geochelone (_EOL!_)
-  - galactic-ex1.15.5-otp26.0.2
 - Foxy Fitzroy (_EOL!_)
   - foxy-ex1.15.5-otp26.0.2
 
@@ -52,20 +50,23 @@ The following versions are not supported yet and are used as CI targets for Rcle
 The following versions were used in the past and are still available on Docker Hub, but are no longer used for the operation test of Rclex.
 
 - Humble Hawksbill
+  - humble-ex1.15.5-otp26.0.2 (past latest)
+  - humble-ex1.13.4-otp25.0.3
   - humble-ex1.13.4-otp24.3.4.2
-- Galactic Geochelone
+- Galactic Geochelone (_EOL!_)
+  - galactic-ex1.15.5-otp26.0.2
   - galactic-ex1.13.4-otp25.0.3
   - galactic-ex1.13.1-otp24.1.7
   - galactic-ex1.12.3-otp24.1.5
   - galactic-ex1.11.4-otp23.3.4
-- Foxy Fitzroy
+- Foxy Fitzroy (_EOL!_)
   - foxy-ex1.14.5-otp25.3.2.5
   - foxy-ex1.14.0-otp25.0.4
   - foxy-ex1.13.4-otp25.0.3
   - foxy-ex1.13.1-otp24.1.7
   - foxy-ex1.12.3-otp24.1.5
   - foxy-ex1.11.4-otp23.3.4
-- Dashing Diademata
+- Dashing Diademata (_EOL!_)
   - dashing-ex1.12.3-otp24.1.5
   - dashing-ex1.11.4-otp23.3.4
   - dashing-ex1.10.4-otp23.3.4
