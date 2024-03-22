@@ -4,7 +4,7 @@ This repository maintains the Dockerfile for the trial and tests of [Rclex](http
 
 https://hub.docker.com/r/rclex/rclex_docker
 
-You can use the Docker image like the follow.
+You can use the Docker image like the following.
 
 ```
 $ docker pull rclex/rclex_docker:latest
@@ -13,7 +13,7 @@ $ docker run -it --rm --name rclex rclex/rclex_docker:latest
 
 ## The rule of Docker Tags
 
-Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we decide to give the Tag of Docker image a long name to clarify each version.
+Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we decided to give the Tag of Docker image a long name to clarify each version.
 
 - `name`-ex`A.B.C`-otp`X.Y.Z`
   - `name`: The distribution of ROS 2 (e.g., humble)
@@ -22,10 +22,11 @@ Since Rclex relies heavily on 3 components (ROS 2, Elixir and Erlang/OTP), we de
 
 ## Available versions (docker tags)
 
-Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.com/r/rclex/rclex_docker/tags)). They are associated with the ext of each Dockerfile on [GitHub repository](https://github.com/rclex/rclex_docker).
+Here is the list of Tags (also see [Tags page on Docker Hub](https://hub.docker.com/r/rclex/rclex_docker/tags)) as the CI targets for Rclex.
+They are associated with the ext of each Dockerfile on [GitHub repository](https://github.com/rclex/rclex_docker).
 
 **[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
-Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
+Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
   - humble-ex1.15.5-otp26.0.2 **[latest]**
@@ -37,11 +38,11 @@ Only this tag provides multi-platform, `linux/amd64` and `linux/arm64`.
   - foxy-ex1.15.5-otp26.0.2
 
 We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
-In particular, we have decided to stop supporting for Dashing due to compatibility with Rclex code.
+In particular, we have decided to stop supporting Dashing due to compatibility with Rclex code.
 
 ### Experimental versions
 
-The following versions are not supported yet and used as CI targets for Rclex, but these images are already published to Docker Hub for the future.
+The following versions are not supported yet and are used as CI targets for Rclex, but these images have been published to Docker Hub for the future.
 
 - Iron Irwini (_STS until Nov 2024_)
   - iron-ex1.15.5-otp26.0.2
