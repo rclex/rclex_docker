@@ -29,8 +29,8 @@ They are associated with the ext of each Dockerfile on [GitHub repository](https
 Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
-  - humble-ex1.16.2-otp26.2.3
-  - humble-ex1.15.7-otp26.2.3 **[latest]**
+  - humble-ex1.16.2-otp26.2.2
+  - humble-ex1.15.7-otp26.2.2 **[latest]**
   - humble-ex1.14.5-otp25.3.2.5
 - Foxy Fitzroy (_EOL!_)
   - foxy-ex1.15.5-otp26.0.2
