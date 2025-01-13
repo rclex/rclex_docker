@@ -10,7 +10,7 @@ ARG ROS_DISTRO
 ENV ROS_DISTRO=${ROS_DISTRO:-jazzy}
 
 # Force error about debconf
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install for rclex_docker
 ## inotify-tools: for mix test.watch
