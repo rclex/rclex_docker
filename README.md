@@ -40,6 +40,25 @@ Only this tag (including past) provides multi-platform, `linux/amd64` and `linux
 We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
 In particular, we have decided to stop supporting Dashing due to compatibility with Rclex code.
 
+### Policy for versions maintenance
+
+First of all, please understand that we do not maintain this repository and Rclex at all times due to our limited development resource,,,
+
+For Elixir, the version one earlier than the latest is considered as the "latest" version of this repository and Rclex.
+The subminor is assigned to the latest (last) version.
+Therefore, when 1.18 is already released, this repository's "latest" Elixir is 1.17.3.  
+For Erlang/OTP, we select the corresponding one.
+
+The Docker images are maintained to support previous and later versions from "latest".
+For the previous version, the OTP version is lowered by one.
+For the later version, we do not always keep up with the latest Elixir releases.
+
+It's hard to decide which LTS ROS distribution should be the "latest" one,,, 
+We generally choose the most popular ones in the community at the time.
+However, please feel free to ask us if you want to use a newer distribution with Rclex for your project development.
+We do not actively support STS ROS Distribution.
+If Rclex works with only minor changes, we will support them, but if it is too much work, we will skip it.
+
 ### Experimental versions
 
 The following versions are not supported yet and are used as CI targets for Rclex, but these images have been published to Docker Hub for the future.
