@@ -1,6 +1,6 @@
 # Setup the target version
 ## base image, ARG is overridable by --build-arg
-ARG BASE_IMAGE=hexpm/elixir:1.15.7-erlang-26.2.3-ubuntu-jammy-20240125
+ARG BASE_IMAGE=hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20250126
 FROM $BASE_IMAGE
 ## Set Ubuntu version by Codename, ARG is overridable by --build-arg
 ARG UBUNTU_CODENAME
