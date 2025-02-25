@@ -28,6 +28,8 @@ They are associated with the ext of each Dockerfile on [GitHub repository](https
 **[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
 Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
+- Jazzy Jalisco (**LTS rosdistro until May 2029**)
+  - jazzy-ex1.17.3-otp27.2
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
   - humble-ex1.16.2-otp26.2.2
   - humble-ex1.15.7-otp26.2.2 **[latest]**

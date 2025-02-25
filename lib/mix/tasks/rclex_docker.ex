@@ -52,7 +52,9 @@ defmodule Mix.Tasks.RclexDocker do
       # {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"},
       # {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
       ### Iron
-      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"}
+      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"},
+      ### Jazzy
+      {"hexpm/elixir:1.17.3-erlang-27.2-ubuntu-noble-20241118.1", "jazzy"}
     ]
   end
 
@@ -96,7 +98,7 @@ defmodule Mix.Tasks.RclexDocker do
   """
   def parse_base_image_name(base_image_name) do
     Regex.named_captures(
-      ~r"hexpm/elixir:(?<elixir_version>\d+\.\d+\.\d+)-erlang-(?<erlang_otp_version>\d+\.\d+\.\d+(\.\d+)?)-ubuntu-(?<ubuntu_codename>[a-z]+)-(?<build_date>[0-9]{8})",
+      ~r"hexpm/elixir:(?<elixir_version>\d+\.\d+\.\d+)-erlang-(?<erlang_otp_version>\d+\.\d+(\.\d+)?(\.\d+)?)-ubuntu-(?<ubuntu_codename>[a-z]+)-(?<build_date>[0-9]{8}).*",
       base_image_name
     )
   end

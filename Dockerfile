@@ -7,10 +7,10 @@ ARG UBUNTU_CODENAME
 ENV UBUNTU_CODENAME=${UBUNTU_CODENAME:-jammy}
 ## Set ROS 2 distribution, ARG is overridable by --build-arg
 ARG ROS_DISTRO
-ENV ROS_DISTRO=${ROS_DISTRO:-humble}
+ENV ROS_DISTRO=${ROS_DISTRO:-jazzy}
 
 # Force error about debconf
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install for rclex_docker
 ## inotify-tools: for mix test.watch
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Install ROS START
-## refer to https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
+## refer to https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html
 
 ## Set locale
 RUN apt-get update && apt-get -y install \
@@ -47,7 +47,7 @@ RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu ${UBUNTU_CODENAME} main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 ## Upgrade before installing ROS 2 packages
-## WHY: refer to "Warning" in https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#install-ros-2-packages
+## WHY: refer to "Warning" in https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html#install-ros-2-packages
 RUN apt-get update \
   && apt-get -y upgrade \
   && apt-get clean \
