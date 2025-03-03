@@ -20,18 +20,27 @@ defmodule Mix.Tasks.RclexDocker do
   end
 
   def latest_target_tuple() do
-    {"hexpm/elixir:1.15.7-erlang-26.2.2-ubuntu-jammy-20240125", "humble"}
+    {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20250126", "humble"}
   end
 
   def list_target_tuples() do
     [
+      ### Humble
+      {"hexpm/elixir:1.18.2-erlang-27.2.4-ubuntu-jammy-20250126", "humble"},
+      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20250126", "humble"},
+      {"hexpm/elixir:1.16.3-erlang-26.2.5-ubuntu-jammy-20240530", "humble"},
+      ### Jazzy
+      {"hexpm/elixir:1.18.2-erlang-27.2.4-ubuntu-noble-20250127", "jazzy"},
+      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-noble-20250127", "jazzy"},
+      {"hexpm/elixir:1.16.3-erlang-26.2.5-ubuntu-noble-20240530", "jazzy"}
+      ##### The below are already deprecated versions
       ### Dashing
       # {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-bionic-20210325", "dashing"},
       # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
       # {"hexpm/elixir:1.10.4-erlang-23.3.4-ubuntu-bionic-20210325", "dashing"},
       # {"hexpm/elixir:1.9.4-erlang-22.3.4.18-ubuntu-bionic-20210325", "dashing"},
       ### Foxy
-      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-focal-20230126", "foxy"},
+      # {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-focal-20230126", "foxy"},
       # {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-focal-20230126", "foxy"},
       # {"hexpm/elixir:1.14.0-erlang-25.0.4-ubuntu-focal-20211006", "foxy"},
       # {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-focal-20211006", "foxy"},
@@ -45,16 +54,14 @@ defmodule Mix.Tasks.RclexDocker do
       # {"hexpm/elixir:1.12.3-erlang-24.1.5-ubuntu-focal-20210325", "galactic"},
       # {"hexpm/elixir:1.11.4-erlang-23.3.4-ubuntu-focal-20210325", "galactic"},
       ### Humble
-      {"hexpm/elixir:1.16.2-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},
-      {"hexpm/elixir:1.15.7-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},
+      # {"hexpm/elixir:1.16.2-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},
+      # {"hexpm/elixir:1.15.7-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},
       # {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "humble"},
-      {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-jammy-20230126", "humble"},
+      # {"hexpm/elixir:1.14.5-erlang-25.3.2.5-ubuntu-jammy-20230126", "humble"},
       # {"hexpm/elixir:1.13.4-erlang-25.0.3-ubuntu-jammy-20220428", "humble"},
       # {"hexpm/elixir:1.13.4-erlang-24.3.4.2-ubuntu-jammy-20220428", "humble"}
       ### Iron
-      {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"},
-      ### Jazzy
-      {"hexpm/elixir:1.17.3-erlang-27.2-ubuntu-noble-20241118.1", "jazzy"}
+      # {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"},
     ]
   end
 
