@@ -32,7 +32,10 @@ defmodule Mix.Tasks.RclexDocker do
       ### Humble
       {"hexpm/elixir:1.19.0-erlang-28.1-ubuntu-jammy-20251001", "humble"},
       {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-jammy-20251001", "humble"},
-      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20251001", "humble"}
+      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20251001", "humble"},
+      ##### The below are experimental versions
+      ### Kilted
+      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20251001", "kilted"}
       ##### The below are already deprecated versions
       ### Jazzy
       # {"hexpm/elixir:1.18.2-erlang-27.2.4-ubuntu-noble-20250127", "jazzy"},

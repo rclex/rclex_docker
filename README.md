@@ -61,9 +61,10 @@ If Rclex works with only minor changes, we will support them, but if it is too m
 
 ### Experimental versions
 
-The following versions are not supported yet and are used as CI targets for Rclex, but these images have been published to Docker Hub for the future.
+The following versions are not yet sufficiently supported and are not used as CI targets for Rclex. However, these images are published on Docker Hub for future usage.
 
-- None of this now
+- Kilted Kaiju (**STS rosdistro until Dec 2026**)
+  - kilted-ex1.18.4-otp27.3.4.3
 
 ### Deprecated versions
 
