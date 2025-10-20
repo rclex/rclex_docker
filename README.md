@@ -30,11 +30,11 @@ Only this tag (including past) provides multi-platform, `linux/amd64` and `linux
 
 - Jazzy Jalisco (**LTS rosdistro until May 2029**)
   - jazzy-ex1.19.0-otp28.1
-  - jazzy-ex1.18.4-otp27.2.4
+  - jazzy-ex1.18.4-otp27.3.4.3
   - jazzy-ex1.17.3-otp27.2.4
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
   - humble-ex1.19.0-otp28.1
-  - humble-ex1.18.4-otp27.2.4 **[latest]**
+  - humble-ex1.18.4-otp27.3.4.3 **[latest]**
   - humble-ex1.17.3-otp27.2.4
 
 We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
