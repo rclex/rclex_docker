@@ -20,31 +20,35 @@ defmodule Mix.Tasks.RclexDocker do
   end
 
   def latest_target_tuple() do
-    {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-jammy-20251001", "humble"}
+    {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-jammy-20260509", "humble"}
   end
 
   def list_target_tuples() do
     [
       ### Jazzy
-      {"hexpm/elixir:1.19.0-erlang-28.1-ubuntu-noble-20251001", "jazzy"},
-      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20251001", "jazzy"},
-      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-noble-20251001", "jazzy"},
+      {"hexpm/elixir:1.20.0-erlang-29.0.1-ubuntu-noble-20260509.1", "jazzy"},
+      {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-noble-20260509.1", "jazzy"},
+      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20260509.1", "jazzy"},
       ### Humble
-      {"hexpm/elixir:1.19.0-erlang-28.1-ubuntu-jammy-20251001", "humble"},
-      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-jammy-20251001", "humble"},
-      {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20251001", "humble"},
+      {"hexpm/elixir:1.20.0-erlang-29.0.1-ubuntu-jammy-20260509", "humble"},
+      {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-jammy-20260509", "humble"},
+      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-jammy-20260509", "humble"},
       ##### The below are experimental versions
       ### Kilted
-      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20251001", "kilted"}
+      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20260509.1", "kilted"}
       ##### The below are already deprecated versions
       ### Jazzy
+      # {"hexpm/elixir:1.19.0-erlang-28.1-ubuntu-noble-20251001", "jazzy"},
       # {"hexpm/elixir:1.18.2-erlang-27.2.4-ubuntu-noble-20250127", "jazzy"},
+      # {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-noble-20251001", "jazzy"},
       # {"hexpm/elixir:1.17.3-erlang-27.2-ubuntu-noble-20250127", "jazzy"},
       # {"hexpm/elixir:1.16.3-erlang-26.2.5-ubuntu-noble-20240530", "jazzy"},
       ### Iron
       # {"hexpm/elixir:1.15.5-erlang-26.0.2-ubuntu-jammy-20230126", "iron"},
       ### Humble
+      # {"hexpm/elixir:1.19.0-erlang-28.1-ubuntu-jammy-20251001", "humble"},
       # {"hexpm/elixir:1.18.2-erlang-27.2.4-ubuntu-jammy-20250126", "humble"},
+      # {"hexpm/elixir:1.17.3-erlang-27.2.4-ubuntu-jammy-20251001", "humble"},
       # {"hexpm/elixir:1.16.3-erlang-26.2.5-ubuntu-jammy-20240530", "humble"}
       # {"hexpm/elixir:1.16.2-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},
       # {"hexpm/elixir:1.15.7-erlang-26.2.2-ubuntu-jammy-20240125", "humble"},

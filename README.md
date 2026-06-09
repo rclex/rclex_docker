@@ -29,13 +29,13 @@ They are associated with the ext of each Dockerfile on [GitHub repository](https
 Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
 - Jazzy Jalisco (**LTS rosdistro until May 2029**)
-  - jazzy-ex1.19.0-otp28.1
+  - jazzy-ex1.20.0-otp29.0.1
+  - jazzy-ex1.19.5-otp28.5
   - jazzy-ex1.18.4-otp27.3.4.3
-  - jazzy-ex1.17.3-otp27.2.4
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
-  - humble-ex1.19.0-otp28.1
-  - humble-ex1.18.4-otp27.3.4.3 **[latest]**
-  - humble-ex1.17.3-otp27.2.4
+  - humble-ex1.20.0-otp29.0.1
+  - humble-ex1.19.5-otp28.5 **[latest]**
+  - humble-ex1.18.4-otp27.3.4.3
 
 We highly recommend using Humble version because the previous ROS 2 distributions have already reached EOL.
 In particular, we have decided to stop supporting Dashing due to compatibility with Rclex code.
@@ -71,13 +71,17 @@ The following versions are not yet sufficiently supported and are not used as CI
 The following versions were used in the past and are still available on Docker Hub, but are no longer used for the operation test of Rclex.
 
 - Jazzy Jalisco (**LTS rosdistro until May 2029**)
+  - jazzy-ex1.19.0-otp28.1
   - jazzy-ex1.18.2-otp27.2.4
+  - jazzy-ex1.17.3-otp27.2.4
   - jazzy-ex1.17.3-otp27.2
   - jazzy-ex1.16.3-otp26.2.5
 - Iron Irwini (_EOL!_)
   - iron-ex1.15.5-otp26.0.2
 - Humble Hawksbill (**LTS rosdistro until May 2027**)
+  - humble-ex1.19.0-otp28.1
   - humble-ex1.18.2-otp27.2.4
+  - humble-ex1.17.3-otp27.2.4
   - humble-ex1.16.3-otp26.2.5
   - humble-ex1.16.2-otp26.2.2
   - humble-ex1.15.7-otp26.2.2 (past latest)

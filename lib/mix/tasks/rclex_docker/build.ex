@@ -136,7 +136,7 @@ defmodule Mix.Tasks.RclexDocker.Build do
   """
   @spec parse_args([String.t()]) :: Options.t()
   def(parse_args(args)) do
-    Enum.reduce(args, %Options{}, fn arg, acc ->
+    Enum.reduce(args, %Options{}, fn arg, %Options{} = acc ->
       case arg do
         "--dry-run" -> %Options{acc | dry_run: true}
         "--latest" -> %Options{acc | latest: true}
