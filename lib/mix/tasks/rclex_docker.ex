@@ -25,6 +25,10 @@ defmodule Mix.Tasks.RclexDocker do
 
   def list_target_tuples() do
     [
+      ### Lyrical
+      {"hexpm/elixir:1.20.0-erlang-29.0.1-ubuntu-resolute-20260421", "lyrical"},
+      {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-resolute-20260421", "lyrical"},
+      {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-resolute-20260421", "lyrical"},
       ### Jazzy
       {"hexpm/elixir:1.20.0-erlang-29.0.1-ubuntu-noble-20260509.1", "jazzy"},
       {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-noble-20260509.1", "jazzy"},
@@ -35,6 +39,8 @@ defmodule Mix.Tasks.RclexDocker do
       {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-jammy-20260509", "humble"},
       ##### The below are experimental versions
       ### Kilted
+      {"hexpm/elixir:1.20.0-erlang-29.0.1-ubuntu-noble-20260509.1", "kilted"},
+      {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-noble-20260509.1", "kilted"},
       {"hexpm/elixir:1.18.4-erlang-27.3.4.3-ubuntu-noble-20260509.1", "kilted"}
       ##### The below are already deprecated versions
       ### Jazzy

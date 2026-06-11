@@ -28,6 +28,10 @@ They are associated with the ext of each Dockerfile on [GitHub repository](https
 **[latest]** means the `latest` tag associated with [the recommended environment for Rclex](https://github.com/rclex/rclex#recommended-environment).
 Only this tag (including past) provides multi-platform, `linux/amd64` and `linux/arm64`.
 
+- Lyrical Luth (**LTS rosdistro until May 2031**)
+  - jazzy-ex1.20.0-otp29.0.1
+  - jazzy-ex1.19.5-otp28.5
+  - jazzy-ex1.18.4-otp27.3.4.3
 - Jazzy Jalisco (**LTS rosdistro until May 2029**)
   - jazzy-ex1.20.0-otp29.0.1
   - jazzy-ex1.19.5-otp28.5
@@ -64,6 +68,8 @@ If Rclex works with only minor changes, we will support them, but if it is too m
 The following versions are not yet sufficiently supported and are not used as CI targets for Rclex. However, these images are published on Docker Hub for future usage.
 
 - Kilted Kaiju (**STS rosdistro until Dec 2026**)
+  - kilted-ex1.20.0-otp29.0.1
+  - kilted-ex1.19.5-otp28.5
   - kilted-ex1.18.4-otp27.3.4.3
 
 ### Deprecated versions
