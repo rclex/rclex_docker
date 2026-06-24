@@ -20,7 +20,7 @@ defmodule Mix.Tasks.RclexDocker do
   end
 
   def latest_target_tuple() do
-    {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-jammy-20260509", "humble"}
+    {"hexpm/elixir:1.19.5-erlang-28.5-ubuntu-noble-20260509.1", "jazzy"}
   end
 
   def list_target_tuples() do
